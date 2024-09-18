@@ -1,0 +1,57 @@
+[gd_scene load_steps=2 format=3 uid="uid://cy0b66ed6je8b"]
+
+[ext_resource type="Script" path="res://scripts/settings.gd" id="1_2gg8k"]
+
+[node name="Settings" type="HBoxContainer"]
+offset_right = 146.0
+offset_bottom = 137.0
+script = ExtResource("1_2gg8k")
+
+[node name="PysicsSettings" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="SpeedSettings" type="VBoxContainer" parent="PysicsSettings"]
+layout_mode = 2
+
+[node name="SpeedLabel" type="Label" parent="PysicsSettings/SpeedSettings"]
+layout_mode = 2
+text = "SPEED"
+horizontal_alignment = 1
+
+[node name="SpeedLineEdit" type="LineEdit" parent="PysicsSettings/SpeedSettings"]
+layout_mode = 2
+
+[node name="HSeparator" type="HSeparator" parent="PysicsSettings"]
+layout_mode = 2
+
+[node name="FreqSettings" type="VBoxContainer" parent="PysicsSettings"]
+layout_mode = 2
+
+[node name="FreqLabel" type="Label" parent="PysicsSettings/FreqSettings"]
+layout_mode = 2
+text = "FREQ"
+horizontal_alignment = 1
+
+[node name="FreqLineEdit" type="LineEdit" parent="PysicsSettings/FreqSettings"]
+layout_mode = 2
+
+[node name="VSeparator" type="VSeparator" parent="."]
+layout_mode = 2
+
+[node name="EstheticSettings" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="ScaleSettings" type="VBoxContainer" parent="EstheticSettings"]
+layout_mode = 2
+
+[node name="ScaleLabel" type="Label" parent="EstheticSettings/ScaleSettings"]
+layout_mode = 2
+text = "SIZE"
+horizontal_alignment = 1
+
+[node name="ScaleLineEdit" type="LineEdit" parent="EstheticSettings/ScaleSettings"]
+layout_mode = 2
+
+[connection signal="text_submitted" from="PysicsSettings/SpeedSettings/SpeedLineEdit" to="." method="_on_speed_line_edit_text_submitted"]
+[connection signal="text_submitted" from="PysicsSettings/FreqSettings/FreqLineEdit" to="." method="_on_freq_line_edit_text_submitted"]
+[connection signal="text_submitted" from="EstheticSettings/ScaleSettings/ScaleLineEdit" to="." method="_on_scale_line_edit_text_submitted"]

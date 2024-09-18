@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://d00gom1oxm6kd"]
+
+[ext_resource type="PackedScene" uid="uid://6jynlpburdct" path="res://scenes/midi_signal_handler.tscn" id="1_8rwg5"]
+[ext_resource type="PackedScene" uid="uid://cy0b66ed6je8b" path="res://scenes/settings.tscn" id="2_ya0lq"]
+
+[node name="MainLevel" type="Node2D"]
+
+[node name="MidiSignalHandler" parent="." instance=ExtResource("1_8rwg5")]
+
+[node name="Settings" parent="." instance=ExtResource("2_ya0lq")]
