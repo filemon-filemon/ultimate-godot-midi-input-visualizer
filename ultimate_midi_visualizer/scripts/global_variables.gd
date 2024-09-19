@@ -3,6 +3,7 @@ extends Node
 var number_of_handled_controllers := -1
 
 var active_controller : int
+var active_port : int
 var sensor_value : float
 
 var point_speed := 100.0

@@ -41,5 +41,6 @@ func _spawn_new_visualizer():
 	self.add_child(new_visualizer)
 
 func _set_global_variables():
+	Global.active_port = raw_controller_number
 	Global.active_controller = pc_controller_number
 	Global.sensor_value = pc_midi_value
